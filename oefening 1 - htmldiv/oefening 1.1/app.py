@@ -11,7 +11,7 @@ app = Dash(__name__)
 
 
 
-FILL_IN = ######
+FILL_IN = ''
 app.layout = html.Div([FILL_IN])
 
 
@@ -21,5 +21,3 @@ app.layout = html.Div([FILL_IN])
 
 if __name__ == "__main__":
     app.run_server(debug=True)
-
-
