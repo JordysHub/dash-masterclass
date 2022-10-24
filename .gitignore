@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 .DS-store
-test.ipynb_checkpoints
+test.ipynb
