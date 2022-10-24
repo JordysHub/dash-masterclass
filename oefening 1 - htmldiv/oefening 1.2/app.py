@@ -1,7 +1,7 @@
 '''
 Oefening 1.2:
 Maak naast de header een subtitel onder de header (maak hiervan gebruik van children en de html.H1 en html.Div componenten).
-Gebruik de styling parameter om de styling van de tekst te veranderen. Gebruik hiervoor de dict 'colors'.
+Gebruik de styling parameter om de styling van de tekst te veranderen. Gebruik hiervoor de dict 'layout_dict'.
 https://dash.plotly.com/layout
 '''
 
@@ -10,36 +10,26 @@ from dash import Dash, html, dcc
 
 app = Dash(__name__)
 
-colors = {
-    'background': 'lightblue',
-    'header': 'black',
-    '': ''
+layout_dict = {
+    'backgroundColor': 'lightgreen',
+    'header': 'darkblue',
+    'text': 'darkred',
+    'textAlign': 'center',
     }
 
 
-FILL_IN_1: {'background': '', 'textAlign': ''}
-FILL_IN_2: {'textAlign': '', 'color': ''}
-FILL_IN_3: {'textAlign': '', 'color': ''}
-
-# FILL_IN_1: {'background': colors[background]}
-# FILL_IN_2: {'textAlign': 'center', 'color': colors[header]}
-# FILL_IN_3: {'textAlign': 'center', 'color': colors[text]}
-
-
+FILL_IN_1: # TODO
+FILL_IN_2: # TODO
+FILL_IN_3: # TODO
 
 
 app.layout = html.Div(style = FILL_IN_1, children=[
 
-    # TODO 1.2
-
-
-    # html.H1(children="Hello, Best Talent Group Ever!" , style = FILL_IN_2),
-    # html.Div(children= "Welcome to this Masterclass", style = FILL_IN_3)
-
+    # TODO FILL_IN_2
+    # TODO FILL_IN_3
 
 
 ])
-
 
 
 if __name__ == "__main__":

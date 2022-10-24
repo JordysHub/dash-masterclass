@@ -1,6 +1,6 @@
 """
 Oefening 2:
-Hier gaan we aan de slag met dash core components (dcc). 
+Hier gaan we aan de slag met dash core components (dcc).
 Deze worden gebruikt om objecten neer te zetten zoals controls en graphs.
 
 TODO 1:
@@ -16,15 +16,10 @@ from dash import Dash, html, dcc
 import plotly.express as px
 import pandas as pd
 
+
 app = Dash(__name__)
 
-df = pd.DataFrame(
-    {
-        "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
-        "Amount": [4, 1, 2, 2, 4, 5],
-        "City": ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"],
-    }
-)
+
 
 # html.H1 is the <h1> </h1> html object
 FILL_IN = html.H1("Hello, Best Talent Group Ever!")
@@ -48,4 +43,3 @@ app.layout = html.Div(
 
 if __name__ == "__main__":
     app.run_server(debug=True)
-

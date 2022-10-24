@@ -9,12 +9,8 @@ app = Dash(__name__)
 
 
 
-
-
 FILL_IN = ''
 app.layout = html.Div([FILL_IN])
-
-
 
 
 
