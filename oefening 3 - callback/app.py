@@ -48,8 +48,6 @@ OUTPUT_CONTENT = Output()
 '''Zie onderaan deze file'''
 
 
-
-
 app = Dash(__name__)
 
 app.layout = html.Div(
@@ -57,7 +55,6 @@ app.layout = html.Div(
         html.Div(
             html.H1("Hello, Best Talent Group Ever!"), style={"textAlign": "center", "color": "darkblue"}
         ),
-
         html.P(
             children="Welcome to this Masterclass",
             style={"textAlign": layout_dict["textAlign"], "color": layout_dict["text"]},
@@ -84,7 +81,6 @@ app.layout = html.Div(
 
     ]
 )
-
 
 @app.callback(
     # TODO 1
