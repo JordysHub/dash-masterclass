@@ -5,7 +5,6 @@ Zoals gezegd zijn de callbacks hetgeen het dashboard echt tot leven gaat brengen
 De belangrijskte properties van het menu zijn: 'id' (deze hebben we nodig voor de callback), 'value' en 'options'.
 
 
-
 # TODO 1
 Maak een dropdownmenu :).
 Gebruik eventueel de documentatie van https://dash.plotly.com/dash-core-components/dropdown
@@ -32,7 +31,7 @@ app.layout = html.Div(
         html.Div(
             html.H1("Hello, Best Talent Group Ever!"), style={"textAlign": "center", "color": "darkblue"}
         ),
-        html.H3(
+        html.H2(
             children="Let's Party!",
             style={"textAlign": 'center', "color": 'red', 'font-weight': 'bold'},
         ),
