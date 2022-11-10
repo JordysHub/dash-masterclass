@@ -1,7 +1,7 @@
 '''
 Oefening 1.2:
 Maak naast de header een subtitel onder de header (maak hiervan gebruik van children en de html.H1 en html.Div componenten).
-Gebruik het styling argument om de styling van de tekst te veranderen. Gebruik hiervoor de dict 'layout_dict'.
+Gebruik het styling property om de styling van de tekst te veranderen. Gebruik hiervoor de dict 'layout_dict'.
 https://dash.plotly.com/layout
 '''
 
@@ -16,7 +16,7 @@ layout_dict = {
 
 
 # TODO 1: Voeg hier de styling van het Div component toe
-# FILL_IN_1 = 
+# FILL_IN_1 =
 
 # TODO 2: Voeg hier de header toe + styling
 #FILL_IN_2 =

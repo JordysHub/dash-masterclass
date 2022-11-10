@@ -21,8 +21,8 @@ app = Dash(__name__)
 
 app.layout = html.Div(style = {'backgroundColor': 'lightgreen'}, children=[
 
-    html.H1(children="Hello, Best Talent Group Ever!" , style = {'textAlign': layout_dict['textAlign'], 'color': layout_dict['header']}),
-    html.P(children= "Welcome to this Masterclass", style = {'textAlign': layout_dict['textAlign'], 'color': layout_dict['text']}),
+    html.H1("Hello, Best Talent Group Ever!" , style = {'textAlign': layout_dict['textAlign'], 'color': layout_dict['header']}),
+    html.P("Welcome to this Masterclass", style = {'textAlign': layout_dict['textAlign'], 'color': layout_dict['text']}),
 
 ])
 
