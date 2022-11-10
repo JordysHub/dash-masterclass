@@ -5,11 +5,16 @@ Gebruikt een Dash Html Component om in de app layout "Hello, Best Talent Group E
 
 from dash import Dash, html, dcc
 
+# TODO 1 van 1
+FILL_IN = ''
+
+
+
 app = Dash(__name__)
 
 
 
-FILL_IN = ''
+
 app.layout = html.Div([FILL_IN])
 
 
