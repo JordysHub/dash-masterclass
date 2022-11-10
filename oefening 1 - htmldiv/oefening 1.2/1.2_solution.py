@@ -1,6 +1,6 @@
 '''
 Oefening 1.2:
-Maak naast de header een subtitel onder de header (maak hiervan gebruik van children en de html.H1 en html.P componenten).
+Maak naast de header een subtitel onder de header (maak hiervan gebruik van 'children' en de html.H1 en html.P componenten).
 Gebruik de styling parameter om de styling van de tekst te veranderen. Gebruik hiervoor de dict 'colors'.
 https://dash.plotly.com/layout
 '''

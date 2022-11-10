@@ -18,9 +18,9 @@ layout_dict = {
     }
 
 
-FILL_IN_1: # TODO
-FILL_IN_2: # TODO
-FILL_IN_3: # TODO
+FILL_IN_1: # TODO (styling div component)
+FILL_IN_2: # TODO (header)
+FILL_IN_3: # TODO (subtitle)
 
 
 app.layout = html.Div(style = FILL_IN_1, children=[

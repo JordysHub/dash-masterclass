@@ -1,11 +1,13 @@
-from dash import Dash, dcc, html, Input, Output
-from dash import Dash, html, dcc
 import plotly.express as px
 import pandas as pd
+from dash import Dash, dcc, html, Input, Output
+from dash.exceptions import PreventUpdate
 
-
+'''Read dataframe'''
 df = pd.read_csv("./data/night_out.csv")
 
+
+'''Styling dict'''
 layout_dict = {
     'backgroundColor': 'lightgreen',
     'header': 'darkblue',
@@ -20,8 +22,7 @@ layout_dict = {
 DROPDOWN_CONTENT = dcc.Dropdown()
 
 
-
-# TODO 2: DROPDOWN
+# TODO 2: GRAPHS
 
 GRAPH_CONTENT = dcc.Graph()
 
@@ -69,6 +70,7 @@ def update_output_fig(input_value):
 
     # TODO 4
 
+    new_df = # fill in
     fig = px.bar(new_df, x="City", y="Cost", color="Category")
 
     return fig

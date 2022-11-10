@@ -1,7 +1,7 @@
-from dash import Dash, dcc, html, Input, Output
-from dash import Dash, html, dcc
 import plotly.express as px
 import pandas as pd
+from dash import Dash, dcc, html, Input, Output
+from dash.exceptions import PreventUpdate
 
 
 df = pd.read_csv("./data/night_out.csv")
@@ -42,6 +42,8 @@ app.layout = html.Div(
 )
 
 def update_output_fig(input_value):
+    if input_value is None:
+        raise PreventUpdate
     dff = df[df['Category'] ==  input_value]
     fig = px.bar(dff, x="City", y="Cost", color="Category")
     return fig
