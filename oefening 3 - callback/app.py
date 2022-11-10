@@ -1,13 +1,17 @@
+
+
+
+
 import plotly.express as px
 import pandas as pd
 from dash import Dash, dcc, html, Input, Output
 from dash.exceptions import PreventUpdate
 
-'''Read dataframe'''
+
+
+
 df = pd.read_csv("./data/night_out.csv")
 
-
-'''Styling dict'''
 layout_dict = {
     'backgroundColor': 'lightgreen',
     'header': 'darkblue',
@@ -34,7 +38,6 @@ OUTPUT_CONTENT = Output()
 
 
 # TODO 4: UPDATE_FUNCTION
-
 
 
 app = Dash(__name__)

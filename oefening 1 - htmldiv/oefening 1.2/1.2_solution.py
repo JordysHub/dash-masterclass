@@ -6,7 +6,7 @@ https://dash.plotly.com/layout
 '''
 
 
-from dash import Dash, html, dcc
+from dash import Dash, html
 
 
 layout_dict = {
@@ -18,7 +18,6 @@ layout_dict = {
 
 
 app = Dash(__name__)
-
 
 app.layout = html.Div(style = {'backgroundColor': 'lightgreen'}, children=[
 
