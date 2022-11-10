@@ -7,7 +7,7 @@ Vervolgens maken we een callback functie welke deze argumenten gebruikt als inpu
 en een nieuw dataframe retourneren.
 
 Enkele tips:
-- Je kunt in je functie ook printstatements maken om te debuggen of voor feedback.
+- Je kunt in je functie ook printstatements maken om te debuggen of voor extra feedback.
 - Ga niet het originele dataframe wijzigen, maar maak een kopie.
 
 
@@ -30,12 +30,6 @@ from dash.exceptions import PreventUpdate
 
 df = pd.read_csv("./data/night_out.csv")
 
-layout_dict = {
-    "backgroundColor": "lightgreen",
-    "header": "darkblue",
-    "text": "darkred",
-    "textAlign": "center",
-}
 
 # TODO 1: CALLBACKS
 
@@ -55,9 +49,9 @@ app.layout = html.Div(
         html.Div(
             html.H1("Hello, Best Talent Group Ever!"), style={"textAlign": "center", "color": "darkblue"}
         ),
-        html.P(
-            children="Welcome to this Masterclass",
-            style={"textAlign": layout_dict["textAlign"], "color": layout_dict["text"]},
+        html.H3(
+            children="Let's Party!",
+            style={"textAlign": 'center', "color": 'red', 'font-weight': 'bold'},
         ),
         dcc.Dropdown(
             id="my-dropdown",

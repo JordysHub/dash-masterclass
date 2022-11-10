@@ -6,13 +6,6 @@ from dash.exceptions import PreventUpdate
 
 df = pd.read_csv("./data/night_out.csv")
 
-layout_dict = {
-    "backgroundColor": "lightgreen",
-    "header": "darkblue",
-    "text": "darkred",
-    "textAlign": "center",
-}
-
 app = Dash(__name__)
 
 app.layout = html.Div(
@@ -21,9 +14,9 @@ app.layout = html.Div(
             html.H1("Hello, Best Talent Group Ever!"),
             style={"textAlign": "center", "color": "darkblue"},
         ),
-        html.P(
-            children="Welcome to this Masterclass",
-            style={"textAlign": layout_dict["textAlign"], "color": layout_dict["text"]},
+        html.H2(
+            children="Let's Party!",
+            style={"textAlign": 'center', "color": 'red', 'font-weight': 'bold'},
         ),
         dcc.Dropdown(
             id="my-dropdown",
@@ -44,14 +37,14 @@ app.layout = html.Div(
         ),
         html.Br(),
         dcc.Dropdown(id="my-dummy-input", disabled=True, style = {"padding-left": "85px", "width": "60%"}),
-        dcc.Graph(id="my-graph", figure={}),
+        dcc.Graph(id="my-graph"),
     ]
 )
 
 @app.callback(
-    Output(component_id="my-graph", component_property="figure"),
-    [Input(component_id="my-dropdown", component_property="value"),
-     Input(component_id="my-dummy-input", component_property="value")]
+    Output("my-graph", "figure"),
+    [Input("my-dropdown", "value"),
+     Input("my-dummy-input", "value")]
 )
 def update_output_fig(dropdown, dummy):
     if dropdown is None:
@@ -63,6 +56,21 @@ def update_output_fig(dropdown, dummy):
         fig = px.bar(dff, x="City", y="Cost", color="Category")
 
     return fig
+
+
+''' Alternatief:
+
+def update_output_fig(dropdown, dummy):
+
+    fig = px.bar(df, x="City", y="Cost", color="Category")
+
+    if dropdown is not None:
+        dff = df[df["Category"] == dropdown]
+        fig = px.bar(dff, x="City", y="Cost", color="Category")
+
+    return fig
+
+'''
 
 if __name__ == "__main__":
     app.run_server(debug=True)

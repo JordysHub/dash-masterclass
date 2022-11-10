@@ -1,7 +1,9 @@
 '''
 Oefening 1.2:
-Maak naast de header een subtitel onder de header (maak hiervan gebruik van children en de html.H1 en html.Div componenten).
-Gebruik het styling property om de styling van de tekst te veranderen. Gebruik hiervoor de dict 'layout_dict'.
+Maak naast de header een subtitel onder de header (maak hiervan gebruik van de html.H1 en html.H3 of html.P componenten).
+Omdat dit meerdere componenten zijn, zetten we deze in een list. Deze lijst zetten we in de children property van een html.Div (hierover later meer).
+
+Gebruik de styling property om de styling van de tekst te veranderen. Gebruik hiervoor de dict 'layout_dict'.
 https://dash.plotly.com/layout
 '''
 

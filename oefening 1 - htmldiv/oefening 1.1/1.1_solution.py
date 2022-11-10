@@ -12,7 +12,8 @@ FILL_IN = html.H1("Hello, Best Talent Group Ever!")
 
 app = Dash(__name__)
 
-app.layout = html.Div([FILL_IN])
+app.layout = FILL_IN
+
 
 
 if __name__ == "__main__":
