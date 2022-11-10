@@ -4,7 +4,7 @@ import plotly.express as px
 import pandas as pd
 
 
-df = pd.read_csv("night_out.csv")
+df = pd.read_csv("./data/night_out.csv")
 
 layout_dict = {
     "backgroundColor": "lightgreen",
@@ -12,6 +12,7 @@ layout_dict = {
     "text": "darkred",
     "textAlign": "center",
 }
+
 
 app = Dash(__name__)
 
@@ -28,34 +29,38 @@ app.layout = html.Div(
         dcc.Dropdown(
             id="my-dropdown",
             options=[{"label": x, "value": x} for x in sorted(df.Category.unique())],
-            value="",
         ),
         dcc.Graph(id="bar_chart", figure={}),
-        # TODO 1: zorg dat de juiste output id in de html.P komt
         html.H4("Totaal uitgegeven:"),
-        html.P(),
+        html.P(id="text_output"),
     ]
 )
+
 
 @app.callback(
     Output(component_id="bar_chart", component_property="figure"),
     Input(component_id="my-dropdown", component_property="value"),
 )
+
 def update_output_fig(input_value):
-    df = pd.read_csv("night_out.csv")
-    dff = df[df["Category"] == input_value]
-    fig = px.bar(dff, x="City", y="Cost", color="Category")
+    fig = px.bar(df, x="City", y="Cost", color="Category")
+
+    if input_value is not None:
+        print(input_value)
+        dff = df[df["Category"] == input_value]
+        fig = px.bar(dff, x="City", y="Cost", color="Category")
+
     return fig
 
 
-# TODO 2 vul de juiste input id in
-input_id = "to fill"
-
-
-@app.callback(Output("text_output", "children"), Input(input_id, "clickData"))
+@app.callback(Output("text_output", "children"), Input("bar_chart", "clickData"))
 def capture_hover_data(clickData):
-    # TODO 3: bereken het totaal uitgaven van de geselecteerde stad
-    sum_of_city = 0
+    if clickData != None:
+        click = str(clickData["points"][0]["x"])
+        dff = df[df["City"] == click]
+        sum_of_city = dff['Cost'].sum()
+    else:
+        sum_of_city = 0
     return sum_of_city
 
 

@@ -16,16 +16,18 @@ from dash import Dash, html, dcc
 import plotly.express as px
 import pandas as pd
 
+
+app = Dash(__name__)
+
+df = pd.read_csv("night_out.csv")
+
 # html.H1 is the <h1> </h1> html object
 FILL_IN = html.H1("Hello, Best Talent Group Ever!")
 
 colors = {"background": "white", "text": "black"}
 
 # TODO 1:
-# fig = px.bar()
-
-
-app = Dash(__name__)
+# fig = ...
 
 app.layout = html.Div(
     children=[
@@ -35,7 +37,6 @@ app.layout = html.Div(
             style={"textAlign": "center", "color": colors["text"]},
         ),
         # TODO 2:
-
     ],
 )
 

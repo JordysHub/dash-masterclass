@@ -69,7 +69,6 @@ def update_output_fig(dropdown, dummy):
         fig = px.bar(dff, x="City", y="Cost", color="Category")
 
     return fig
-
 '''
 
 if __name__ == "__main__":

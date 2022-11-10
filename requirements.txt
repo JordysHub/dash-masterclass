@@ -1,5 +1,4 @@
-# pipreqs --savepath=requirements.in & pip-compile
-
 dash==2.6.2
 pandas==1.5.0
 plotly==5.10.0
+setuptools==65.4.1

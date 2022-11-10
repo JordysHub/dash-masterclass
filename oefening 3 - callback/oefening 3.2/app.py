@@ -1,7 +1,6 @@
 """
-Oefening 3:
-Make yourself comfortable, want hier blijven we voorlopig wel even!
-Zoals gezegd zijn de callbacks hetgeen het dashboard echt tot leven gaat brengen.
+Oefening 3.2:
+Nu we een input (het dropdownmenu) en een output hebben (de grafiek), kunnen we de twee aan elkaar gaan linken met callbacks!
 De callback maakt gebruik van een Input en Ouput. Deze hebben beide 2 argumenten: het component_id en de component_property.
 Vervolgens maken we een callback functie welke deze argumenten gebruikt als input en output. Over het algemeen wil je in deze functie je data filteren
 en een nieuw dataframe retourneren.

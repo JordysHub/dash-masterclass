@@ -21,10 +21,10 @@ layout_dict = {
 # FILL_IN_1 =
 
 # TODO 2: Voeg hier de header toe + styling
-#FILL_IN_2 =
+# FILL_IN_2 =
 
 # TODO 3: Voeg hier een subtitle toe + styling
-#FILL_IN_3 =
+# FILL_IN_3 =
 
 
 app = Dash(__name__)
